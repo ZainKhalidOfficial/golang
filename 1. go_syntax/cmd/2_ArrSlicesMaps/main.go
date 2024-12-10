@@ -76,6 +76,12 @@ func main() {
 
 	arr_mem_allocation_speedtest()
 
+	//A copied slice also keep reference to the original slice
+	var mySliceToCopy = []int{1, 2, 3}
+	var mySliceCopied = mySliceToCopy
+	mySliceCopied[2] = 4
+	fmt.Println(mySliceToCopy)
+
 }
 
 func arr_mem_allocation_speedtest() {
